@@ -136,7 +136,7 @@ public abstract class Human {
         }
     }
 
-    public boolean talk(Human human) {
+    private boolean talk(Human human) {
         if (this.isGender() && human.isGender()) {
             return Math.random() < 0.5;
         } else {
@@ -179,7 +179,7 @@ public abstract class Human {
         return firstHuman.toBeInRelationships(secondHuman);
     }
 
-    Human toBeInRelationships(Human human) {
+    private Human toBeInRelationships(Human human) {
         if (this.talk(human) && this.tolerateSociety(human) && this.spendTimeTogether(human)) {
             if (this.isGender() == human.isGender()) {
                 System.out.println("Люди одного пола, и они не могут родить ребенка.");

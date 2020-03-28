@@ -19,10 +19,10 @@ public class Woman extends Human {
     public Human giveBirthToHuman(Human man) {
         if (Math.random() <= 0.5) {
             System.out.println("Поздравляем, у вас родился мальчик!");
-            return this.createChildBoy(man);
+            return createChildBoy(man);
         } else {
             System.out.println("Поздравляем, у вас родилась девочка!");
-            return this.createChildGirl(man);
+            return createChildGirl(man);
         }
     }
 
